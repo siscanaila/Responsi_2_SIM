@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <style>
       body {
-        background-color: #f8f9fa; /* Light gray background */
+        background-color: #85abd2; /* Light gray background */
         display: flex;
         flex-direction: column;
         min-height: 100vh; /* Ensure full height */
@@ -36,7 +36,22 @@
       .about-section {
         background: #f0f8ff;
       }
+      card {
+        transition: transform 0.2s;
+      }
 
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card {
+        display: flex; /* Menggunakan flexbox untuk kartu */
+        flex-direction: column; /* Mengatur isi kartu secara vertikal */
+        height: 100%; /* Memastikan kartu mengisi tinggi kontainer */
+      }
+
+      .card-body {
+        flex-grow: 1; /* Mengizinkan isi kartu untuk tumbuh dan mengisi ruang */
+      }
       .card {
         transition: transform 0.2s;
         height: 100%; /* Pastikan semua kartu memiliki tinggi yang sama */
