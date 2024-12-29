@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pawfect Treats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+      /* General Body Styling */
+      body {
+        background-color: #f8f8fa; /* Light gray background */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure full height */
+      }
+
+      /* Navbar Styling */
+      .navbar {
+        background-color: #ffffff !important; /* Custom blue for navbar */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk navbar */
+        position: fixed; /* Menjadikan navbar fixed di atas */
+        top: 0; /* Menempel pada bagian atas */
+        width: 100%; /* Pastikan lebar navbar penuh */
+        z-index: 1030; /* Agar navbar tetap di atas elemen lain */
+      }
+
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        color: #0056b3;
+      }
+
+      .navbar-nav .nav-link.active {
+        color: #ffcc00; /* Active link color */
+      }
+
+      /* Jumbotron Styling */
+      .jumbotron {
+        background-color: #246291 !important; /* Blue background for jumbotron */
+        color: white;
+      }
+
+      .jumbotron .display-4 {
+        font-size: 4rem;
+      }
+
+      .jumbotron .lead {
+        font-size: 1.5rem;
+      }
+
+      /* Card Styling */
+      .card {
+        border-color: #f4e6ae; /* Border color */
+      }
+
+      .card-body {
+        background-color: #f0f8ff; /* Light blue background */
+      }
+
+      .card-title {
+        color: #246291;
+      }
+
+      /* Carousel Styling */
+      .carousel-caption {
+        background-color: rgba(251, 245, 245, 0.7); /* Gray background with transparency */
+        color: white; /* Ensure text is visible */
+      }
+
+      .carousel-image {
+        transition: opacity 0.3s ease; /* Smooth transition */
+      }
+
+      .carousel-item:hover .carousel-image {
+        opacity: 0.5; /* Reduce opacity on hover */
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #246291; /* Blue background for footer */
+        color: white;
+        text-align: center;
+        padding: 1em;
+        margin-top: auto; /* Push footer to the bottom if content is short */
+      }
+
+      footer a {
+        color: white;
+      }
+
+      footer a:hover {
+        color: #ffcc00; /* Yellow on hover */
+      }
+
+      /* Custom Background Class */
+      .custom-yellow-bg {
+        background-color: #fafaf8; /* Yellowish background */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo_navbar.png" alt="Logo" width="150" height="40" class="d-inline-block align-text-top" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="form.html">Appointment</a>
+              <!-- Kelas active ditambahkan di sini -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- START APPOINTMENT FORM -->
+    <section id="appointment" class="appointment-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Book an Appointment</h2>
+        <form method="post" name="appointment">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="date" class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" id="date" name="date" required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="time" class="form-label">Preferred Time</label>
+              <input type="time" class="form-control" id="time" name="time" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="petType" class="form-label">Type of Pet</label>
+              <select class="form-select" id="petType" name="petType" required>
+                <option value="" disabled selected>Select your pet type</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="serviceType" class="form-label">Service Type</label>
+              <select class="form-select" id="serviceType" name="serviceType" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="bathing">Bathing</option>
+                <option value="haircut">Haircut</option>
+                <option value="nail_trimming">Nail Trimming</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Additional Notes</label>
+            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Any additional information or requests"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit Appointment</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- END APPOINTMENT FORM -->
+
+    <!-- Start Footer -->
+    <footer class="text-center py-3">
+      <p class="mb-0">
+        <a href="#" class="fw-bold me-3"><i class="bi bi-instagram"></i> @pawtreat</a>
+        <a href="#" class="fw-bold me-3"><i class="bi bi-telephone"></i>+1 (234) 567-890</a>
+        <a href="#" class="fw-bold"><i class="bi bi-envelope"></i>pawtreats@example.com</a>
+      </p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwK4F2zr-xRlw2lu4hwDhfQW-gGIIi7MKW3hPsncRhDBKonmIrTh-O74KC1MoVWnZ9m/exec";
+      const form = document.forms["appointment"];
+      const timestamp = new Date().toLocaleString();
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

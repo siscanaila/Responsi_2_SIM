@@ -1,0 +1,84 @@
+/* General Body Styling */
+body {
+  background-color: #f8f8fa; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #246291 !important; /* Custom blue for navbar */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffcc00; /* Active link color */
+}
+
+/* Jumbotron Styling */
+.jumbotron {
+  background-color: #246291 !important; /* Blue background for jumbotron */
+  color: white;
+}
+
+.jumbotron .display-4 {
+  font-size: 4rem;
+}
+
+.jumbotron .lead {
+  font-size: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+  border-color: #f4e6ae; /* Border color */
+}
+
+.card-body {
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+.card-title {
+  color: #246291;
+}
+
+/* Carousel Styling */
+.carousel-caption {
+  background-color: rgba(251, 245, 245, 0.7); /* Gray background with transparency */
+  color: white; /* Ensure text is visible */
+}
+
+.carousel-image {
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.carousel-item:hover .carousel-image {
+  opacity: 0.5; /* Reduce opacity on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #246291; /* Blue background for footer */
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto; /* Push footer to the bottom if content is short */
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+/* Custom Background Class */
+.custom-yellow-bg {
+  background-color: #fafaf8; /* Yellowish background */
+}

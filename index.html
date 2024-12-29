@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pawtreats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <style>
+      /* General Body Styling */
+      body {
+        background-color: #f8f8fa; /* Light gray background */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure full height */
+      }
+
+      /* Navbar Styling */
+      .navbar {
+        background-color: #ffffff !important; /* Custom blue for navbar */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk navbar */
+        position: fixed; /* Menjadikan navbar fixed di atas */
+        top: 0; /* Menempel pada bagian atas */
+        width: 100%; /* Pastikan lebar navbar penuh */
+        z-index: 1030; /* Agar navbar tetap di atas elemen lain */
+      }
+
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        color: #0056b3;
+      }
+
+      .navbar-nav .nav-link.active {
+        color: #ffcc00; /* Active link color */
+      }
+
+      /* Jumbotron Styling */
+      .jumbotron {
+        background-color: #f8f9fa !important; /* Blue background for jumbotron */
+        color: white;
+      }
+
+      .jumbotron .display-4 {
+        padding-top: 50px;
+        font-size: 4rem;
+      }
+
+      .jumbotron .lead {
+        font-size: 1.5rem;
+      }
+
+      /* Card Styling */
+      .card {
+        border-color: #f4e6ae; /* Border color */
+      }
+
+      .card-body {
+        background-color: #f0f8ff; /* Light blue background */
+      }
+
+      .card-title {
+        color: #246291;
+      }
+
+      /* Carousel Styling */
+      .carousel-caption {
+        background-color: rgba(251, 245, 245, 0.7); /* Gray background with transparency */
+        color: white; /* Ensure text is visible */
+      }
+
+      .carousel-image {
+        transition: opacity 0.3s ease; /* Smooth transition */
+      }
+
+      .carousel-item:hover .carousel-image {
+        opacity: 0.5; /* Reduce opacity on hover */
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #246291; /* Blue background for footer */
+        color: white;
+        text-align: center;
+        padding: 1em;
+        margin-top: auto; /* Push footer to the bottom if content is short */
+      }
+
+      footer a {
+        color: white;
+      }
+
+      footer a:hover {
+        color: #ffcc00; /* Yellow on hover */
+      }
+
+      /* Custom Background Class */
+      .custom-yellow-bg {
+        background-color: #fafaf8; /* Yellowish background */
+      }
+
+      /* Carousel Styles */
+      .carousel-item img {
+        width: 80%; /* Image spans the full width */
+        max-height: 500px; /* Limit the image height */
+        object-fit: cover; /* Ensure the image is not distorted */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        z-index: 10; /* Place controls on top of other elements */
+        color: white; /* Control button color */
+        width: 15%; /* Control button width */
+        opacity: 0.5; /* Default opacity */
+        transition: opacity 0.15s ease; /* Smooth transition for opacity */
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        opacity: 0.9; /* Increased opacity on hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo_navbar.png" alt="Logo" width="150" height="40" class="d-inline-block align-text-top" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Appointment</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- START JUMBOTRON -->
+    <div class="jumbotron text-center p-5 text-white">
+      <img src="logo_baru.png" alt="Reading Logo" width="700" class="circle" />
+    </div>
+    <!-- END JUMBOTRON -->
+    <br />
+    <br />
+    <!-- Slide Show -->
+    <center><h5>Our Services</h5></center>
+    <section id="carouselSection" class="py-5">
+      <div class="container">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="carousel-image" style="background-image: url('1.jpg'); height: 500px; background-size: fit; background-position: center"></div>
+              <div class="carousel-caption d-none d-md-block">
+                <div class="caption-bg">
+                  <h5>"Grooming with Love, For a Healthy Life"</h5>
+                  <p>We serve better quality of hygiene of your pets</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="carousel-image" style="background-image: url('3.jpg'); height: 500px; background-size: fit; background-position: center"></div>
+              <div class="carousel-caption d-none d-md-block">
+                <div class="caption-bg">
+                  <h5>Nails Done, And Be Pretty</h5>
+                  <p>Our pet nail trimming service keeps your pet's claws neat and tidy</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-image" style="background-image: url('4.jpg'); height: 500px; background-size: fit; background-position: center"></div>
+              <div class="carousel-caption d-none d-md-block">
+                <div class="caption-bg">
+                  <h5>Your pet's comfort is our top priority.</h5>
+                  <p>Our experienced groomers are gentle and patient with pets of all ages and breeds.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- End Slide Show -->
+    <!-- START ABOUT -->
+    <div class="row">
+      <center><h5>Book Now</h5></center>
+      <div class="col-md-6 mb-3 mb-md-0">
+        <div class="card shadow-sm border-0">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Contact Us</h5>
+            <p class="card-text">If you have any questions, feel free to reach out to us:</p>
+            <p class="card-text"><strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+            <p class="card-text"><strong>Phone:</strong> +1 (234) 567-890</p>
+            <a href="mailto:23611105@students.uii.ac.id" class="btn btn-outline-primary">✉️ Email Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Our Address</h5>
+            <p class="card-text">You can find us at:</p>
+            <p class="card-text"><strong>123 Main Street</strong></p>
+            <p class="card-text"><strong>City, State, ZIP</strong></p>
+            <p class="card-text"><strong>Country</strong></p>
+            <a href="https://maps.app.goo.gl/BA4APjujBQhuoSix9" class="btn btn-outline-primary" target="_blank">🗺️ View on Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END ABOUT -->
+
+    <!-- Start Footer -->
+    <footer class="text-center py-3">
+      <p class="mb-0">
+        <a href="#" class="fw-bold me-3"><i class="bi bi-instagram"></i> @pawtreat</a>
+        <a href="#" class="fw-bold me-3"><i class="bi bi-telephone"></i>+1 (234) 567-890</a>
+        <a href="#" class="fw-bold"><i class="bi bi-envelope"></i>pawtreats@example.com</a>
+      </p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

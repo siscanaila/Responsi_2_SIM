@@ -1,0 +1,96 @@
+body {
+  background-color: #ffffff; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #ffffff !important; /* Custom blue for navbar */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk navbar */
+  position: fixed top; /* Menjadikan navbar fixed di atas */
+  top: 0; /* Menempel pada bagian atas */
+  width: 100%; /* Pastikan lebar navbar penuh */
+  z-index: 1030; /* Agar navbar tetap di atas elemen lain */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffcc00; /* Active link color */
+}
+
+.about-section {
+  background: #f0f8ff;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.about-section {
+  background: #f0f8ff;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+footer {
+  background-color: #246291; /* Blue background for footer */
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto; /* Push footer to the bottom if content is short */
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
+/* Custom Background Class */
+.custom-yellow-bg {
+  background-color: #fafaf8; /* Yellowish background */
+}
